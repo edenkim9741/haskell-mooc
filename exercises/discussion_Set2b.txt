@@ -12,3 +12,6 @@ guard 문법을 사용해서 반환해야하는 문자열 길이가 padding보�
 
 [Ex 5]
 countdown 함수는 Int만을 input parameter로 사용하므로 이를 돕기 위해 countdown'이라는 함수를 만들었다. countdown' 함수는 "Ready! "라는 문자열로 시작하여 n개만큼의 카운트 다운을 시행한 뒤 "Liftoff!"라는 문자열로 끝나게 된다.
+
+[Ex 6]
+n이 0이나 1인 경우에는 1이므로 1을 반환하고, 그렇지 않은 경우에는 smallestDivisor' 함수를 호출하여 나누어떨어지는 가장 작은 수를 찾는다. smallestDivisor'는 2부터 시작하여 1씩 커지며 나누어떨어지는 수가 나타나면 그 수를 반환한다.

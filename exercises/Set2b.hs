@@ -120,7 +120,15 @@ countdown' s t =  countdown' (s ++ (show t) ++ "... ") (t-1)
 -- Hint: remember the mod function!
 
 smallestDivisor :: Integer -> Integer
-smallestDivisor = todo
+smallestDivisor 1 = 1
+smallestDivisor 0 = 1
+smallestDivisor n = smallestDivisor' n 2
+
+smallestDivisor' n k
+    | n `mod` k == 0 = k
+    | otherwise = smallestDivisor' n (k+1)
+
+
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a function isPrime that checks if the given number
