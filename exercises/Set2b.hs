@@ -99,7 +99,10 @@ leftpad s t
 -- * you'll probably need a recursive helper function
 
 countdown :: Integer -> String
-countdown = todo
+countdown n = countdown' "Ready! " n
+
+countdown' s 0 = s ++ "Liftoff!"
+countdown' s t =  countdown' (s ++ (show t) ++ "... ") (t-1)
 
 ------------------------------------------------------------------------------
 -- Ex 6: implement the function smallestDivisor that returns the
