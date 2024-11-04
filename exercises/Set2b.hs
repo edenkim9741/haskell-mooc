@@ -137,7 +137,14 @@ smallestDivisor' n k
 -- Ps. 0 and 1 are not prime numbers
 
 isPrime :: Integer -> Bool
-isPrime = todo
+isPrime 0 = False
+isPrime 1 = False
+isPrime n = isPrime' n 2
+
+isPrime' n k
+    | n <= k = True
+    | n `mod` k == 0 = False
+    | otherwise = isPrime' n (k+1)
 
 ------------------------------------------------------------------------------
 -- Ex 8: implement a function biggestPrimeAtMost that returns the
