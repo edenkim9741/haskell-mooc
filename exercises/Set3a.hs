@@ -207,6 +207,12 @@ joinToLength n strings = filter ((==n).length) [first ++ last | first <- strings
 --   [] +|+ [True]        ==> [True]
 --   [] +|+ []            ==> []
 
+(+|+) :: [a] -> [a] -> [a]
+[] +|+ [] = []
+[] +|+ (b:bs) = [b]
+(a:as) +|+ [] = [a]
+(a:as) +|+ (b:bs) = [a,b]
+
 
 ------------------------------------------------------------------------------
 -- Ex 11: remember the lectureParticipants example from Lecture 2? We
