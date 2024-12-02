@@ -123,7 +123,8 @@ sorted (x1:x2:xs) = if x1 > x2 then False
 -- Use pattern matching and recursion (and the list constructors : and [])
 
 sumsOf :: [Int] -> [Int]
-sumsOf xs = todo
+sumsOf [] = []
+sumsOf (x:xs) = x: [t + x | t <- sumsOf xs]
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement the function merge that merges two sorted lists of
