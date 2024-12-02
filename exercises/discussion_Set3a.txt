@@ -18,3 +18,6 @@ palindrome 함수는 리스트를 받아서 해당 리스트가 palindrome을 �
 
 [Ex 7]
 recursion을 활용하여 check value가 true라면 update한 value를 가지고 while을 한 번 더 실행하고 만족하지 않는다면 value를 반환하도록 하였다.
+
+[Ex 8]
+Left가 반환되었을 때에는 whileRight문이 종료될 때이므로 check로부터 반환 받은 값을 그대로 반환하고, Right가 반환되었을 때에는 해당 값으로 whileRight를 한 번 더 실행되도록 하였다.
