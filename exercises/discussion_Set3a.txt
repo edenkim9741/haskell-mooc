@@ -15,3 +15,6 @@ palindrome 함수는 리스트를 받아서 해당 리스트가 palindrome을 �
 
 [Ex 6]
 문제에서 주어진 힌트를 활용하여 takeWhile을 이용하여 max보다 작거나 같은 원소들을 반환하였다. 이때 들어가는 리스트는 list comprehension을 이용한 [k^i | i <- [0 ..]]이다. [k^0, k^1, k^2, ...]와 같은 형태로 무한대로 원소를 가지는 리스트를 의미한다.
+
+[Ex 7]
+recursion을 활용하여 check value가 true라면 update한 value를 가지고 while을 한 번 더 실행하고 만족하지 않는다면 value를 반환하도록 하였다.
