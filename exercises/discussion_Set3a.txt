@@ -6,3 +6,7 @@ pattern matching을 이용하여 인수로 Nothing이 들어왔다면 Nothing을
 
 [Ex 3]
 Ex 2와 마찬가지로 pattern matching을 이용하여 해결하였고, a와 b가 모두 Just a, Just b가 들어왔다면 $를 이용하여 괄호를 줄인 형태로 Just f $ a b를 반환하였다.
+
+[Ex 4]
+palindrome 함수는 리스트를 받아서 해당 리스트가 palindrome을 만족하는지를 반환한다. 그렇기 때문에 type은 palindrome :: (Eq a) => [a] -> Bool가 된다. (Eq a)의 type class가 있는 이유는 == 연산을 사용하기 때문에 a가 == 연산이 가능해야 하기 때문이다. firstHalf는 firstHalf :: [a] -> [a]의 타입을 갖는다. 특별한 것은 없지만 리스트의 길이가 홀수인 경우에는 `div`연산을 한 결과보다 1을 더해서 반환해주어야하기 때문에 where을 이용하였다.
+

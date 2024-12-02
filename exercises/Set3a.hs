@@ -80,9 +80,14 @@ mapMaybe2 f (Just a) (Just b) = Just $ f a b
 palindromeHalfs :: [String] -> [String]
 palindromeHalfs xs = map firstHalf (filter palindrome xs)
 
-firstHalf = todo
+firstHalf :: [a] -> [a]
+firstHalf a = take getLength a
+    where getLength = if even $ length a then (length a) `div` 2
+                  else length a `div` 2 + 1
 
-palindrome = todo
+
+palindrome :: (Eq a) => [a] -> Bool
+palindrome x = x == reverse x
 
 ------------------------------------------------------------------------------
 -- Ex 5: Implement a function capitalize that takes in a string and
