@@ -229,7 +229,10 @@ joinToLength n strings = filter ((==n).length) [first ++ last | first <- strings
 --   sumRights [Left "bad!", Left "missing"]         ==>  0
 
 sumRights :: [Either a Int] -> Int
-sumRights = todo
+sumRights values =  sum $ map sumRights' values
+sumRights' :: Num b => Either a b -> b
+sumRights' (Right x) = x
+sumRights' (Left x) = 0
 
 ------------------------------------------------------------------------------
 -- Ex 12: recall the binary function composition operation
