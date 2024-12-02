@@ -305,4 +305,13 @@ multiApp func xs a = func $ map ($ a) xs
 -- function, the surprise won't work. See section 3.8 in the material.
 
 interpreter :: [String] -> [String]
-interpreter commands = todo
+interpreter commands = interpreter' 0 0 commands []
+
+interpreter' :: (Num a1, Num a2, Show a2, Show a1) => a2 -> a1 -> [String] -> [String] -> [String]
+interpreter' _ _ [] output = output
+interpreter' x y ("up":commands) output = interpreter' x (y+1) commands output
+interpreter' x y ("down":commands) output = interpreter' x (y-1) commands output
+interpreter' x y ("left":commands) output = interpreter' (x-1) y commands output
+interpreter' x y ("right":commands) output = interpreter' (x+1) y commands output
+interpreter' x y ("printX":commands) output = interpreter' x y commands (output ++ [show x])
+interpreter' x y ("printY":commands) output = interpreter' x y commands (output ++ [show y])
