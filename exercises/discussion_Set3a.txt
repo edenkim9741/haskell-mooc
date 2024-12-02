@@ -12,3 +12,6 @@ palindrome 함수는 리스트를 받아서 해당 리스트가 palindrome을 �
 
 [Ex 5]
 문제를 해결하기 위해 string을 받았을 때 첫 문자를 대문자로 바꿔주는 함수 firstUpper를 where문으로 작성하였다. map을 이용하여 words로 반환된 [String]에 firstUpper를 적용하였고 이렇게 나온 [String]을 하나의 String으로 붙여주기 위해서 unwords를 사용하였다.
+
+[Ex 6]
+문제에서 주어진 힌트를 활용하여 takeWhile을 이용하여 max보다 작거나 같은 원소들을 반환하였다. 이때 들어가는 리스트는 list comprehension을 이용한 [k^i | i <- [0 ..]]이다. [k^0, k^1, k^2, ...]와 같은 형태로 무한대로 원소를 가지는 리스트를 의미한다.
